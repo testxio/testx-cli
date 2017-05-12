@@ -36,10 +36,10 @@ const initTestxProject = (tplPath, localPath) => {
 }
 
 module.exports = opts => {
-  console.log(opts.coffee)
   console.log('Initializing testx project...')
   let templatesPath = `${__dirname}/../templates`
-  let templateName = opts.coffee ? 'coffee' : 'js'
+  // let templateName = opts.coffee ? 'coffee' : 'js'
+  let templateName = 'coffee'
   initTestxProject(templatesPath, templateName)
   console.log('Done!')
   console.log('Use "npm run test-local" to execute the sample test script.')
