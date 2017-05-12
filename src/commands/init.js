@@ -21,12 +21,18 @@ const replaceVars = () => {
   })
 }
 
+const installDependencies = () => {
+  console.log('Installing dependencies…')
+  shell.exec('npm i')
+}
+
 const initTestxProject = (tplPath, localPath) => {
   // Copy template files to the target dir
   copyTemplates(tplPath, localPath)
   // TODO: Prompt the user for input (what input?)
   // Go over all the template files and replace place holders with user input
   replaceVars()
+  installDependencies()
 }
 
 module.exports = opts => {
@@ -36,4 +42,5 @@ module.exports = opts => {
   let templateName = opts.coffee ? 'coffee' : 'js'
   initTestxProject(templatesPath, templateName)
   console.log('Done!')
+  console.log('Use "npm run test-local" to execute the sample test script.')
 }
