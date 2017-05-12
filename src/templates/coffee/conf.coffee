@@ -1,1 +1,2 @@
-module.exports = {}
+exports.config =
+  test: [MY_VAR]

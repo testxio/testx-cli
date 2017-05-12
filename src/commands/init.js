@@ -13,16 +13,25 @@ const copyTemplates = (tplsPath, templateName) => {
   }
 }
 
+const replaceVars = () => {
+  shell.ls('-Rl', '.').forEach(entry => {
+    if (entry.isFile()) {
+      shell.sed('-i', '\\[MY_VAR\\]', '"testx"', entry.name)
+    }
+  })
+}
+
 const initTestxProject = (tplPath, localPath) => {
+  // Copy template files to the target dir
   copyTemplates(tplPath, localPath)
-  // TODO: Copy template files to the target dir
-  // TODO: Prompt the user for input
-  // TODO: Go over all the template files and replace place holders with user input  console.log('Command-line input received:')
+  // TODO: Prompt the user for input (what input?)
+  // Go over all the template files and replace place holders with user input
+  replaceVars()
 }
 
 module.exports = opts => {
   console.log(opts.coffee)
-  console.log('Initializing...')
+  console.log('Initializing testx project...')
   let templatesPath = `${__dirname}/../templates`
   let templateName = opts.coffee ? 'coffee' : 'js'
   initTestxProject(templatesPath, templateName)
