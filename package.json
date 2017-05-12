@@ -2,18 +2,21 @@
   "name": "testx-cli",
   "version": "0.1.0",
   "description": "",
-  "main": "./lib/index.js",
   "preferGlobal": true,
   "bin": {
-    "testx": "bin/testx.js"
+    "testx": "src/testx.js"
   },
   "scripts": {
-    "postinstall": "npm install -g protractor@4.0.9 && webdriver-manager update",
+    "_postinstall": "npm i -g protractor@4.0.9 && webdriver-manager update",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Greyarch BV",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "shelljs": "^0.7.7"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
   }
 }
