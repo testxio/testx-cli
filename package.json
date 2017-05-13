@@ -13,7 +13,9 @@
   "author": "Greyarch BV",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^1.1.3",
     "commander": "^2.9.0",
+    "inquirer": "^3.0.6",
     "shelljs": "^0.7.7"
   },
   "devDependencies": {

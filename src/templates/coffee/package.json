@@ -1,18 +1,15 @@
 {
-  "name": "my-testx-project",
-  "version": "1.0.0",
-  "description": "My testx.io project.",
-  "main": "index.coffee",
-  "author": "",
-  "license": "ISC",
+  "name": "[PROJECT]",
+  "version": "[VERSION]",
+  "description": "[DESCRIPTION]",
   "dependencies": {
     "testx": "^2.6.3",
     "testx-jasmine-reporters": "^1.1.1",
     "testx-standard-objects": "^0.1.1"
   },
   "scripts": {
-    "test": "docker run --rm -it -u `id -u`:`id -g` -v `pwd`:/work --net=host testx/protractor conf.coffee",
-    "test-local": "protractor conf.coffee"
+    "test": "protractor conf.coffee",
+    "test-docker": "docker run --rm -it -u `id -u`:`id -g` -v `pwd`:/work --net=host testx/protractor conf.coffee"
   },
   "testx": {
     "logScript": false,
