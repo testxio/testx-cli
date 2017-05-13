@@ -8,6 +8,7 @@ program.version('0.1.0')
 program
   .command('init')
   .description('initialize a testx project')
+  .alias('i')
   // .option('-C, --coffee', 'initialize a CoffeeScript project')
   .action(initCmd)
 
