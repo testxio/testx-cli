@@ -22,12 +22,19 @@ From within the project directory:
 
 or
 
-	npm run test-local
+	npm test
 
 ### Run with [Docker](https://www.docker.com/)
 This method is recommended when executing your tests as part of a continuous integration pipeline. When using Docker you do not need protractor installed on your machine (or the CI server), but of course you need Docker.
 
-  	npm test
+  	npm run test-docker
 
 ## Next steps
+The sample testx script is in **scripts/my-first-script.testx**. Change it to do something more useful and run it again.
+
+[Protractor](http://www.protractortest.org/) configuration (your starting point) is in **conf.coffee**.
+
 Check the [testx documentation](http://testx.io/testx) documentation to find out where to go from here.
+
+## Editor support
+Use [the atom testx language plugin](https://atom.io/packages/language-testx) for syntax highlights and auto-completion. If you do not use [Atom](https://atom.io) you are on your own. But seriously, you should.
