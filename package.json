@@ -1,13 +1,13 @@
 {
   "name": "@testx/cli",
-  "version": "0.1.2",
-  "description": "",
+  "version": "0.2.0",
+  "description": "The testx command line interface",
   "preferGlobal": true,
   "bin": {
     "testx": "src/testx.js"
   },
   "scripts": {
-    "_postinstall": "npm i -g protractor@4.0.9 && webdriver-manager update",
+    "_postinstall": "npm i -g protractor@5.1.2 && webdriver-manager update",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Greyarch BV",

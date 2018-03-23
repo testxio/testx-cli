@@ -1,0 +1,19 @@
+{
+  "name": "[PROJECT]",
+  "version": "[VERSION]",
+  "description": "[DESCRIPTION]",
+  "scripts": {
+    "pretest": "webdriver-manager update",
+    "test": "protractor conf.js"
+  },
+  "dependencies": {
+    "@testx/objects-standard": "^1.0.1",
+    "@testx/reporters-jasmine": "^2.0.0",
+    "protractor": "^5.3.0",
+    "testx": "^3.0.4"
+  },
+  "testx": {
+    "logScript": false,
+    "actionTimeout": 5000
+  }
+}

@@ -1,0 +1,9 @@
+- go to:
+    url: /
+- set:
+    searchBox: "testx.io\n"
+- wait:
+    - googleSearchForm
+- check equals:
+    searchBox: testx.io
+    resultLink('testxio'): testxio · GitHub

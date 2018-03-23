@@ -1,15 +1,14 @@
 #!/usr/bin/env node
-const initCmd = require('./commands/init')
-
-var program = require('commander')
-
-program.version('0.1.0')
+const program = require("commander");
+const initCmd = require("./commands/init");
+const package = require("../package.json");
+program.version(package.version);
 
 program
-  .command('init')
-  .description('initialize a testx project')
-  .alias('i')
-  // .option('-C, --coffee', 'initialize a CoffeeScript project')
-  .action(initCmd)
+  .command("init")
+  .description("initialize a testx project")
+  .alias("i")
+  .option("-N, --next", "initialize a testx@3.x project")
+  .action(initCmd);
 
-program.parse(process.argv)
+program.parse(process.argv);

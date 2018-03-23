@@ -3,13 +3,14 @@
   "version": "[VERSION]",
   "description": "[DESCRIPTION]",
   "dependencies": {
-    "testx": "^2.6.3",
+    "testx": "^2.9.1",
     "testx-jasmine-reporters": "^1.1.1",
     "testx-standard-objects": "^0.1.1"
   },
   "scripts": {
     "test": "protractor conf.coffee",
-    "test-docker": "docker run --rm -it -u `id -u`:`id -g` -v `pwd`:/work --net=host testx/protractor conf.coffee"
+    "test-docker":
+      "docker run --rm -it -u `id -u`:`id -g` -v `pwd`:/work --net=host testx/protractor conf.coffee"
   },
   "testx": {
     "logScript": false,
